@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+    <img src="./logo.svg" alt="spliter" style="padding-bottom: 20px;">
+    </header>
+    <form action="">
+    <div id="container">
+        <div id="first-section">
+             <p class="bill">  Bill
+                <input class="bill-value" type="text" required> 
+             </p>  
+            <div id="select-container">
+                <p class="select-tip">  Select Tip% </p>
+                <div class="select-tip-flex">
+                <button type="button" class="select-options" onclick="fivePercent()">5%</button> 
+                <button type="button" class="select-options" onclick="tenPercent()">10%</button>
+                <button type="button" class="select-options" onclick="fifteenPercent()">15%</button> 
+                <button type="button" class="select-options" onclick="twentyfivePercent()">25%</button>
+                <button type="button" class="select-options" onclick="fiftyPercent()">50%</button>
+                <input type="search" class="select-custom" type="text" ondblclick="customPercent()" placeholder="Custom">
+            </div>
+        </div>
+    </form>
+            <div id="NOP">
+                <p class="number-of-people">Number of People
+                <input type="number" class="people-icon" min="1" required></p>
+            </div>
+        </div>
+    <div id="second-section">
+        <div class="TAPP">
+            <div class="tip-amount-per-person">
+                <p class="tip-amount">Tip Amount</p>
+                <p class="person">/ person</p>
+                <div class="result1">$0.00</div> 
+            </div>
+        </div>
+        <div class="TPP">
+            <div class="tip-amount-per-person">
+                <p class="total">Total</p>
+                <p class="person"> /person</p>
+                <div class="result2">$0.00</div> 
+            </div>  
+            <button id="reset" onclick="thankYou">RESET</button>
+        </div>
+        
+    </div>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
