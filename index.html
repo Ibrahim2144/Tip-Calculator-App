@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tip Calculator</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing-component</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-    <img src="./logo.svg" alt="spliter" style="padding-bottom: 20px;">
-    </header>
-    <form action="">
-    <div id="container">
-        <div id="first-section">
-             <p class="bill">  Bill
-                <input class="bill-value" type="text" required> 
-             </p>  
-            <div id="select-container">
-                <p class="select-tip">  Select Tip% </p>
-                <div class="select-tip-flex">
-                <button type="button" class="select-options" onclick="fivePercent()">5%</button> 
-                <button type="button" class="select-options" onclick="tenPercent()">10%</button>
-                <button type="button" class="select-options" onclick="fifteenPercent()">15%</button> 
-                <button type="button" class="select-options" onclick="twentyfivePercent()">25%</button>
-                <button type="button" class="select-options" onclick="fiftyPercent()">50%</button>
-                <input type="search" class="select-custom" type="text" ondblclick="customPercent()" placeholder="Custom">
-            </div>
-        </div>
-    </form>
-            <div id="NOP">
-                <p class="number-of-people">Number of People
-                <input type="number" class="people-icon" min="1" required></p>
-            </div>
-        </div>
-    <div id="second-section">
-        <div class="TAPP">
-            <div class="tip-amount-per-person">
-                <p class="tip-amount">Tip Amount</p>
-                <p class="person">/ person</p>
-                <div class="result1">$0.00</div> 
-            </div>
-        </div>
-        <div class="TPP">
-            <div class="tip-amount-per-person">
-                <p class="total">Total</p>
-                <p class="person"> /person</p>
-                <div class="result2">$0.00</div> 
-            </div>  
-            <button id="reset" onclick="thankYou">RESET</button>
-        </div>
-        
-    </div>
-</div>
-    <script src="index.js"></script>
+  <h2>Our Pricing</h2> 
+    <div class="toggle-container">
+      <p> Annually 
+      <input type="checkbox" id="toggle" onclick="switchContent()">
+      <label for="toggle" class="toggle-label">
+      <span class="toggle-button"></span>
+    </label> Monthly
+  </p></div>
+  <span id="section-housing">
+    <section id="section1"> 
+      <p>  <h3>Basic</h3>
+        <small class="dols">$</small>  <h1 id="heading1"> 199.99 </h1> 
+        <div id="monthly-h1" style="display: none;"><h1> <small>$</small>19.99 </h1></div>
+        <span class="border"></span>
+        500GB Storage 
+        <span class="border"></span>
+        2 Users Allowed
+        <span class="border"></span>
+        Send up to 3GB
+          <span class="border"></span>
+        <button id="section1-btn">LEARN MORE</button>
+       </p>
+      </section>
+      <section id="section2">
+        <p> <h3>Professional</h3>
+          <small class="dols">$</small> <h1 id="heading2">249.99 </h1></div>
+       <span class="border"></span>
+        1TB Storage 
+          <span class="border"></span>
+        5 Users Allowed 
+        <span class="border"></span>
+        Send up to 10GB 
+        <span class="border"></span>
+        <button id="section2-btn">LEARN MORE</button>
+       </p>
+      </section>
+      <section id="section3">
+       <p> <h3>Master</h3>
+        <small class="dols">$</small> <h1 id="heading3">399.99 </h1>
+        <span class="border"></span>
+        2TB Storage 
+        <span class="border"></span>
+        10 Users Allowed
+        <span class="border"></span>
+        Send up to 20GB
+        <span class="border"></span>
+        <button id="section3-btn">LEARN MORE</button>
+       </p>
+      </section>
+  </span>
+ 
+  
+  <script src="index.js"></script>
 </body>
 </html>
